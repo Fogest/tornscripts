@@ -15,21 +15,20 @@
 
 class Faction {
   static parseAnnouncement() {
-    if (document.URL.includes('factions.php?step=your')) {
-      const div = $(".cont-gray10");
+    if (document.URL.includes('factions.php?step=your#/tab=info')) {
+      // Updates current bankers from the "Info" tab on the factions.php page
+      console.log("On faction info page");
+      const div = $(".faction-info-wrap.m-top10.faction-description");
       const imgs = div.find("a[href*='profiles.php'] > img");
       const ids = []
       imgs.each((idx, img) => {
         // get alt attribute
         const role = img.alt;
 
-        // Check if the span text is role-banker
-        if (role.trim().toLowerCase() == 'banker') {
-          // get the profile id from the parent a tag of the span
-          const re = new RegExp('XID=(?<id>\\d+)');
-          const match = re.exec($(img).parent().attr('href'));
-          if (match.length > 0) ids.push(match.groups.id);
-        }
+        // get the profile id from the parent a tag of the span
+        const re = new RegExp('XID=(?<id>\\d+)');
+        const match = re.exec($(img).parent().attr('href'));
+        if (match.length > 0 && match.groups.id != '375042') ids.push(match.groups.id);
       });
       GM_setValue('bankers', ids);
     }
@@ -41,6 +40,7 @@ class Faction {
     if (bankers) {
       const { members } = facBasicData;
 
+      console.log(members);
       // Filter based on status
       const onlineBankers = bankers.filter((id) => members[id].last_action.status !== 'Offline');
 
@@ -117,24 +117,24 @@ function displayFactionMoney(data, userData, bankers) {
   factionDiv.append(spans);
 
   moneySpan.css('color', '');
-  moneySpan.text('$0');
+  moneySpan.text(' Bank');
 
-  if (data) {
-    const { donations } = data;
-    if (donations) {
-      // I should have some balance
-      const { money_balance } = donations[userData.player_id];
+  // if (data) {
+  //   const { donations } = data;
+  //   if (donations) {
+  //     // I should have some balance
+  //     const { money_balance } = donations[userData.player_id];
 
-      if (money_balance) {
-        // Set colors
-        if (money_balance < 0) moneySpan.css('color', 'red');
-        else if (money_balance > 0) moneySpan.css('color', '#678c00');
+  //     if (money_balance) {
+  //       // Set colors
+  //       if (money_balance < 0) moneySpan.css('color', 'red');
+  //       else if (money_balance > 0) moneySpan.css('color', '#678c00');
 
-        // Set text, formatting string as money
-        moneySpan.text(` $${money_balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`);
-      }
-    }
-  }
+  //       // Set text, formatting string as money
+  //       moneySpan.text(` $${money_balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`);
+  //     }
+  //   }
+  // }
 
   // Add the element to the DOM
   moneyPointBlock.after(newPointBlock);
@@ -144,7 +144,7 @@ async function main(apiKey) {
   // Initialize torn api
   const api = new TornAPI(apiKey);
 
-  const [ userData, facData ] = await Promise.all([api.user(), api.faction('basic,donations')]);
+  const [ userData, facData ] = await Promise.all([api.user(), api.faction('basic')]);
 
   // Try to parse a faction announcement if there is one
   Faction.parseAnnouncement();
@@ -154,7 +154,6 @@ async function main(apiKey) {
   // Get the donations from the faction
   displayFactionMoney(facData, userData, bankers);
 }
-
 const apiKey = GM_getValue('apikey');
 
 if (!apiKey) {
