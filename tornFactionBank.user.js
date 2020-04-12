@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Torn City - Faction Bank
-// @namespace    Goltred.Faction
-// @version      0.14.4
+// @namespace    Fogest.Faction
+// @version      0.15.0
 // @description  Display money on faction bank and online bankers
 // @author       Goltred
-// @updateURL    https://raw.githubusercontent.com/Goltred/tornscripts/master/tornFactionBank.user.js
-// @downloadURL  https://raw.githubusercontent.com/Goltred/tornscripts/master/tornFactionBank.user.js
+// @updateURL    https://raw.githubusercontent.com/Fogest/tornscripts/master/tornFactionBank.user.js
+// @downloadURL  https://raw.githubusercontent.com/Fogest/tornscripts/master/tornFactionBank.user.js
 // @match        https://www.torn.com/*
 // @grant        GM_setValue
 // @grant        GM_getValue
