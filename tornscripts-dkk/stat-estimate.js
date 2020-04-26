@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         TORN: Stat Estimate
 // @namespace    dekleinekobini.statestimate
-// @version      2.7.2
+// @version      2.7.3
 // @author       DeKleineKobini
 // @description  Estimate the stats of a player based on their rank.
 // @match        https://www.torn.com/index.php*
@@ -12,7 +12,8 @@
 // @match        https://www.torn.com/blacklist.php*
 // @match        https://www.torn.com/factions.php*
 // @match        https://www.torn.com/competition.php*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=744690
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/stat-estimate.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
 // @grant        GM_getValue

@@ -2,11 +2,12 @@
 // @run-at       document-start
 // @name         TORN: Bazaar Worth
 // @namespace    dekleinekobini.bazaarworth
-// @version      1.1.0
+// @version      1.1.1
 // @author       DeKleineKobini
 // @description  Show the total value the selected item in the bazaars.
 // @match        https://www.torn.com/imarket.php*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=744690
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/bazaar-worth.js
 // @grant        none
 // ==/UserScript==
 

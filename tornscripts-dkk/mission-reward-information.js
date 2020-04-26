@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         TORN: Mission Reward Information
 // @namespace    dekleinekobini.missionrewardinformatiom
-// @version      1.1.3
+// @version      1.1.4
 // @author       DeKleineKobini
 // @description  Give some information about mission rewards.
 // @match        https://www.torn.com/loader.php?sid=missions*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=754362
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/mission-reward-information.js
 // @connect      api.torn.com
 // @connect      script.google.com
 // @connect      script.googleusercontent.com

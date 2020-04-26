@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         TORN: Banker Tools
 // @namespace    dekleinekobini.bankertools
-// @version      2.1.0
+// @version      2.1.1
 // @author       DeKleineKobini
 // @description  Make it easier to be a banker.
 // @match        https://www.torn.com/factions.php?step=your*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=770609
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/banker-tools.js
 // @grant        unsafeWindow
 // ==/UserScript==
 

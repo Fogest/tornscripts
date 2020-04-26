@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         TORN: Item Value
 // @namespace    dekleinekobini.itemvalue
-// @version      2.1.2
+// @version      2.1.3
 // @author       DeKleineKobini
 // @description  Show the value for your items.
 // @match        https://www.torn.com/item.php
 // @match        https://www.torn.com/shops.php*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=743974
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/item-value.js
 // @connect      api.torn.com
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue

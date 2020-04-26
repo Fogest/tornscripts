@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        DKK Torn Utilities
 // @description Commonly used functions in my Torn scripts.
-// @version     2.5.6
+// @version     2.5.7
 // @exclude     *
 // @namespace   https://openuserjs.org/users/DeKleineKobini
-// @homepageURL https://www.torn.com/forums.php#/p=threads&t=16110079
+// @homepageURL https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
 // ==/UserScript==
 
 /* Classes */

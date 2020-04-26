@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name         TORN: No Confirm
 // @namespace    dekleinekobini.noconfirm
-// @version      4.6.3
+// @version      4.6.4
 // @author       DeKleineKobini
 // @description  No confirm message.
 // @match        https://www.torn.com/imarket.php*
 // @match        https://www.torn.com/bazaar.php*
 // @match        https://www.torn.com/item.php*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=754362
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/no-confirm.js
 // @run-at       document-start
 // @grant        unsafeWindow
 // ==/UserScript==

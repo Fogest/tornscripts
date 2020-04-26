@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         TORN: CT2019
 // @namespace    dekleinekobini.christmastown
-// @version      2019.8
+// @version      2019.9
 // @author       DeKleineKobini
 // @description  Christmas Town utilities
 // @match        https://www.torn.com/christmas_town.php*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=759441
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/ct2019.js
 // @run-at       document-start
 // @connect      api.torn.com
 // @grant        GM_xmlhttpRequest

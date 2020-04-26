@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         TORN: Stock Trader
 // @namespace    dekleinekobini.stocktrader
-// @version      2.1.2
+// @version      2.1.3
 // @author       DeKleineKobini
 // @description  Helper for stock trading.
 // @match        https://www.torn.com/stockexchange.php*
 // @match        https://www.torn.com/laptop.php*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=770609
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/stock-trader.js
 // @connect      api.torn.com
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==

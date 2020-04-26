@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         TORN: Safe Crimes
 // @namespace    dekleinekobini.safecrimes
-// @version      1.1.0
+// @version      1.1.1
 // @author       DeKleineKobini
 // @description  Help with doing safe crimes.
 // @match        https://www.torn.com/crimes.php*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=753704
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/safe-crimes.js
 // @grant        unsafeWindow
 // ==/UserScript==
 

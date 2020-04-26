@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         TORN: Travel Cooldown
 // @namespace    dekleinekobini.travelcooldown
-// @version      1.0.2
+// @version      1.0.3
 // @author       DeKleineKobini
 // @description  Warn you if your cooldowns are going to expire before return time.
 // @match        https://www.torn.com/travelagency.php
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=742363
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/travel-cooldown.js
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
 

@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         TORN: Hospital All Day
 // @namespace    dekleinekobini.hospitalallday
-// @version      3.0.0
+// @version      3.0.1
 // @author       DeKleineKobini
 // @description  Get notified when you are almost out of the hospital.
 // @match        https://www.torn.com/*
-// @require      https://greasyfork.org/scripts/390917-dkk-torn-utilities/code/DKK%20Torn%20Utilities.js?version=756855
+// @require      https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/dkk-torn-utils.js
+// @updateURL    https://github.com/Fogest/tornscripts/raw/master/tornscripts-dkk/hospital-all-day.js
 // @connect      api.torn.com
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
