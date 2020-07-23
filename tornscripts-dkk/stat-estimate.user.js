@@ -30,7 +30,7 @@ var settings = {
         blacklist: true,
         faction: {
             wall: true,
-            profile: false
+            profile: true,
         },
         competition: true
     },
@@ -128,18 +128,25 @@ function startListeners(page){
 
     switch(page) {
         case "profiles": // profile
-            xhrIntercept((page, json, uri) => {
-                if(page != "profiles" || !json) return;
+            observeMutations(document, ".basic-list", true, (mut, obs) => {
+                const id = parseInt($("link[rel='canonical']").attr("href").match(/XID=([0-9]*)/i)[1]);
 
-                if (run) {
-                    run = false;
-                    updateUser(json.user.userID, json.userInformation.level, function(result) {
-                        if (result === EMPTY_CHAR) return;
+                const levelDigits = $(".profile-information-wrapper .box-value:eq(0) > li > .digit");
+                let level = 0;
+                level = (parseInt(levelDigits.eq(0).val()) || 0) * 100;
+                level = (parseInt(levelDigits.eq(1).val()) || 0) * 10;
+                level = (parseInt(levelDigits.eq(2).val()) || 0);
 
+                updateUser(id, level, function(result) {
+                    if (result === EMPTY_CHAR) return;
+
+                    $(".content-title > h4").append("<div>" + result + "</div>");
+
+                    observeMutations($(".user-profile").get(0), "#tt-target-info", true, (mut, obs) => {
                         $(".content-title > h4").append("<div>" + result + "</div>");
-                    }, 0);
-                }
-            });
+                    });
+                }, 0);
+            }, { childList: true, subtree: true });
             break;
         case "page": // userlist
             xhrIntercept((page, json, uri) => {
